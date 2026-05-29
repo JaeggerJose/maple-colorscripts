@@ -1,0 +1,6 @@
+/maple
+/build
+/maple-colorscripts
+dist/
+*.tmp
+.DS_Store
