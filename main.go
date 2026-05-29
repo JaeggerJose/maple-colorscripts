@@ -45,13 +45,16 @@ func main() {
 	switch {
 	case *name != "":
 		mob, err = cat.ByName(*name)
+		if err != nil {
+			fatal(err)
+		}
 	case *id != 0:
 		mob, err = cat.ByID(*id)
+		if err != nil {
+			fatal(err)
+		}
 	default:
-		mob, err = cat.Random()
-	}
-	if err != nil {
-		fatal(err)
+		mob = cat.Random()
 	}
 
 	art, err := cat.Render(mob, !*noTitle)

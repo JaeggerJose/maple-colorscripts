@@ -76,8 +76,8 @@ func TestRenderNoTitle(t *testing.T) {
 
 func TestRandomNonEmpty(t *testing.T) {
 	c, _ := Load(testFS())
-	m, err := c.Random()
-	if err != nil || m.Slug == "" {
-		t.Errorf("Random = %+v, err=%v", m, err)
+	m := c.Random()
+	if m.Slug == "" {
+		t.Errorf("Random = %+v", m)
 	}
 }

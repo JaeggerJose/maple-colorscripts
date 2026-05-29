@@ -42,8 +42,8 @@ func Load(fsys fs.FS) (*Catalog, error) {
 
 func (c *Catalog) List() []Mob { return c.mobs }
 
-func (c *Catalog) Random() (Mob, error) {
-	return c.mobs[rand.Intn(len(c.mobs))], nil
+func (c *Catalog) Random() Mob {
+	return c.mobs[rand.Intn(len(c.mobs))]
 }
 
 func (c *Catalog) ByName(name string) (Mob, error) {

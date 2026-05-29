@@ -51,7 +51,7 @@ func run() error {
 
 	client := maplestoryio.New(region, version)
 	usedSlug := map[string]bool{}
-	var metas []embedMeta
+	metas := []embedMeta{}
 	ok, skipped := 0, 0
 
 	for _, id := range ids {
@@ -91,6 +91,10 @@ func run() error {
 		fmt.Printf("ok %d %s -> %s\n", id, meta.Name, slug)
 	}
 
+	if ok == 0 {
+		return fmt.Errorf("all %d mobs skipped; refusing to write empty maple.json", skipped)
+	}
+
 	out, err := json.MarshalIndent(metas, "", "  ")
 	if err != nil {
 		return err
@@ -110,9 +114,12 @@ func renderANSI(gif []byte) (string, error) {
 	}
 	defer os.Remove(tmp.Name())
 	if _, err := tmp.Write(gif); err != nil {
+		tmp.Close()
 		return "", err
 	}
-	tmp.Close()
+	if err := tmp.Close(); err != nil {
+		return "", err
+	}
 
 	cmd := exec.Command("chafa",
 		"--format", "symbols", "--animate", "off",

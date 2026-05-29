@@ -31,15 +31,16 @@ type apiMob struct {
 type Client struct {
 	Region  string
 	Version string
+	BaseURL string
 	HTTP    *http.Client
 }
 
 func New(region, version string) *Client {
-	return &Client{Region: region, Version: version, HTTP: &http.Client{Timeout: 30 * time.Second}}
+	return &Client{Region: region, Version: version, BaseURL: "https://maplestory.io", HTTP: &http.Client{Timeout: 30 * time.Second}}
 }
 
 func (c *Client) base() string {
-	return fmt.Sprintf("https://maplestory.io/api/%s/%s/mob", c.Region, c.Version)
+	return fmt.Sprintf("%s/api/%s/%s/mob", c.BaseURL, c.Region, c.Version)
 }
 
 func (c *Client) MetaURL(id int) string   { return fmt.Sprintf("%s/%d", c.base(), id) }
