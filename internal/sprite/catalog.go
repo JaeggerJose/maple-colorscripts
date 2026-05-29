@@ -77,7 +77,12 @@ func (c *Catalog) Render(m Mob, showTitle bool) (string, error) {
 		if m.IsBoss {
 			boss = " (Boss)"
 		}
-		out += fmt.Sprintf("\n%s  Lv.%d%s\n", m.Name, m.Level, boss)
+		// Level <= 0 means no level (e.g. NPCs) — show just the name.
+		if m.Level > 0 {
+			out += fmt.Sprintf("\n%s  Lv.%d%s\n", m.Name, m.Level, boss)
+		} else {
+			out += fmt.Sprintf("\n%s%s\n", m.Name, boss)
+		}
 	}
 	return out, nil
 }

@@ -17,6 +17,28 @@ func testFS() fstest.MapFS {
 	}
 }
 
+func TestRenderNpcNoLevel(t *testing.T) {
+	fsys := fstest.MapFS{
+		"maple.json":                      {Data: []byte(`[{"id":3003323,"name":"Rock Spirits","level":0,"isBoss":false,"slug":"rock-spirits"}]`)},
+		"colorscripts/large/rock-spirits": {Data: []byte("NPC_ART")},
+	}
+	c, err := Load(fsys)
+	if err != nil {
+		t.Fatal(err)
+	}
+	m, _ := c.ByID(3003323)
+	out, err := c.Render(m, true)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(out, "Rock Spirits") {
+		t.Errorf("missing name: %q", out)
+	}
+	if strings.Contains(out, "Lv.") {
+		t.Errorf("level-0 entry should omit Lv.: %q", out)
+	}
+}
+
 func TestLoadAndList(t *testing.T) {
 	c, err := Load(testFS())
 	if err != nil {

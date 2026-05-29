@@ -119,6 +119,11 @@ go run ./cmd/build         # re-fetch + re-render (needs chafa + network)
 
 Browse mob ids in the API: <https://maplestory.io/api/GMS/255/mob>
 
+**NPCs too:** put NPC ids in `npcs.list` (same format). They're rendered from the
+`/npc/{id}` endpoint and embedded alongside mobs. Browse NPC ids at
+<https://maplestory.io/api/GMS/255/npc>. (NPCs have no level, so the title line
+shows just the name.)
+
 ## How it works
 
 Two layers in one Go module:

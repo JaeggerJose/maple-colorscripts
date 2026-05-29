@@ -1,0 +1,4 @@
+# maple-colorscripts NPC curation list — one maplestory.io npc id per line.
+# Same format as mobs.list (# comments, blank lines ignored). Optional file.
+# Rendered from the /npc/{id} endpoint instead of /mob/{id}.
+3003323  # Rock Spirits (石之精靈們)

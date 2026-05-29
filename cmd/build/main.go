@@ -35,64 +35,76 @@ func main() {
 }
 
 func run() error {
-	listBytes, err := os.ReadFile("mobs.list")
-	if err != nil {
-		return err
-	}
-	ids := ParseMobList(string(listBytes))
-	if len(ids) == 0 {
-		return fmt.Errorf("mobs.list has no ids")
-	}
-
 	outDir := filepath.Join("colorscripts", "large")
 	if err := os.MkdirAll(outDir, 0o755); err != nil {
 		return err
 	}
 
-	client := maplestoryio.New(region, version)
 	usedSlug := map[string]bool{}
 	metas := []embedMeta{}
 	ok, skipped := 0, 0
 
-	for _, id := range ids {
-		meta, err := client.FetchMeta(id)
+	// mobs.list is required; npcs.list is optional. Both feed the same render
+	// pipeline, differing only in the API endpoint kind (mob vs npc).
+	sources := []struct {
+		file, kind string
+		required   bool
+	}{
+		{"mobs.list", "mob", true},
+		{"npcs.list", "npc", false},
+	}
+	for _, src := range sources {
+		listBytes, err := os.ReadFile(src.file)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "skip %d: meta: %v\n", id, err)
-			skipped++
-			continue
+			if src.required {
+				return err
+			}
+			continue // optional list absent
 		}
-		gif, err := client.FetchRender(id)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "skip %d (%s): render: %v\n", id, meta.Name, err)
-			skipped++
-			continue
-		}
-		ansi, err := renderANSI(gif)
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "skip %d (%s): chafa: %v\n", id, meta.Name, err)
-			skipped++
-			continue
-		}
+		ids := ParseMobList(string(listBytes))
+		client := maplestoryio.New(region, version)
+		client.Kind = src.kind
 
-		slug := Slug(meta.Name)
-		if slug == "" {
-			slug = fmt.Sprintf("mob-%d", id)
-		}
-		if usedSlug[slug] {
-			slug = fmt.Sprintf("%s-%d", slug, id)
-		}
-		usedSlug[slug] = true
+		for _, id := range ids {
+			meta, err := client.FetchMeta(id)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "skip %s %d: meta: %v\n", src.kind, id, err)
+				skipped++
+				continue
+			}
+			gif, err := client.FetchRender(id)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "skip %s %d (%s): render: %v\n", src.kind, id, meta.Name, err)
+				skipped++
+				continue
+			}
+			ansi, err := renderANSI(gif)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "skip %s %d (%s): chafa: %v\n", src.kind, id, meta.Name, err)
+				skipped++
+				continue
+			}
 
-		if err := os.WriteFile(filepath.Join(outDir, slug), []byte(ansi), 0o644); err != nil {
-			return err
+			slug := Slug(meta.Name)
+			if slug == "" {
+				slug = fmt.Sprintf("%s-%d", src.kind, id)
+			}
+			if usedSlug[slug] {
+				slug = fmt.Sprintf("%s-%d", slug, id)
+			}
+			usedSlug[slug] = true
+
+			if err := os.WriteFile(filepath.Join(outDir, slug), []byte(ansi), 0o644); err != nil {
+				return err
+			}
+			metas = append(metas, embedMeta{ID: meta.ID, Name: meta.Name, Level: meta.Level, IsBoss: meta.IsBoss, Slug: slug})
+			ok++
+			fmt.Printf("ok %s %d %s -> %s\n", src.kind, id, meta.Name, slug)
 		}
-		metas = append(metas, embedMeta{ID: meta.ID, Name: meta.Name, Level: meta.Level, IsBoss: meta.IsBoss, Slug: slug})
-		ok++
-		fmt.Printf("ok %d %s -> %s\n", id, meta.Name, slug)
 	}
 
 	if ok == 0 {
-		return fmt.Errorf("all %d mobs skipped; refusing to write empty maple.json", skipped)
+		return fmt.Errorf("all entries skipped; refusing to write empty maple.json")
 	}
 
 	out, err := json.MarshalIndent(metas, "", "  ")

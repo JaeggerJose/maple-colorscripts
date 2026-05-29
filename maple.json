@@ -1,26 +1,5 @@
 [
   {
-    "id": 100000,
-    "name": "Snail",
-    "level": 1,
-    "isBoss": false,
-    "slug": "snail"
-  },
-  {
-    "id": 100001,
-    "name": "Blue Snail",
-    "level": 2,
-    "isBoss": false,
-    "slug": "blue-snail"
-  },
-  {
-    "id": 100002,
-    "name": "Red Snail",
-    "level": 4,
-    "isBoss": false,
-    "slug": "red-snail"
-  },
-  {
     "id": 100004,
     "name": "Orange Mushroom",
     "level": 6,
@@ -70,13 +49,6 @@
     "slug": "octopus"
   },
   {
-    "id": 1130100,
-    "name": "Axe Stump",
-    "level": 21,
-    "isBoss": false,
-    "slug": "axe-stump"
-  },
-  {
     "id": 1210101,
     "name": "Ribbon Pig",
     "level": 10,
@@ -89,20 +61,6 @@
     "level": 10,
     "isBoss": false,
     "slug": "bubbling"
-  },
-  {
-    "id": 2110200,
-    "name": "Horny Mushroom",
-    "level": 12,
-    "isBoss": false,
-    "slug": "horny-mushroom"
-  },
-  {
-    "id": 2220000,
-    "name": "Mano",
-    "level": 10,
-    "isBoss": true,
-    "slug": "mano"
   },
   {
     "id": 2230101,
@@ -173,20 +131,6 @@
     "level": 28,
     "isBoss": false,
     "slug": "tortie"
-  },
-  {
-    "id": 4230102,
-    "name": "Wraith",
-    "level": 45,
-    "isBoss": false,
-    "slug": "wraith"
-  },
-  {
-    "id": 5200000,
-    "name": "Jr. Sentinel",
-    "level": 76,
-    "isBoss": false,
-    "slug": "jr-sentinel"
   },
   {
     "id": 4230109,
@@ -294,17 +238,10 @@
     "slug": "pink-teddy"
   },
   {
-    "id": 9300003,
-    "name": "King Slime",
-    "level": 28,
-    "isBoss": true,
-    "slug": "king-slime"
-  },
-  {
-    "id": 2600231,
-    "name": "Jr. Balrog",
-    "level": 128,
-    "isBoss": true,
-    "slug": "jr-balrog"
+    "id": 3003323,
+    "name": "Rock Spirits",
+    "level": 0,
+    "isBoss": false,
+    "slug": "rock-spirits"
   }
 ]

@@ -27,20 +27,26 @@ type apiMob struct {
 	} `json:"meta"`
 }
 
-// Client targets a specific region+version of the API.
+// Client targets a specific region+version of the API. Kind selects the entity
+// endpoint: "mob" (default) or "npc" — they share the same render/meta shape.
 type Client struct {
 	Region  string
 	Version string
 	BaseURL string
+	Kind    string
 	HTTP    *http.Client
 }
 
 func New(region, version string) *Client {
-	return &Client{Region: region, Version: version, BaseURL: "https://maplestory.io", HTTP: &http.Client{Timeout: 30 * time.Second}}
+	return &Client{Region: region, Version: version, BaseURL: "https://maplestory.io", Kind: "mob", HTTP: &http.Client{Timeout: 30 * time.Second}}
 }
 
 func (c *Client) base() string {
-	return fmt.Sprintf("%s/api/%s/%s/mob", c.BaseURL, c.Region, c.Version)
+	kind := c.Kind
+	if kind == "" {
+		kind = "mob"
+	}
+	return fmt.Sprintf("%s/api/%s/%s/%s", c.BaseURL, c.Region, c.Version, kind)
 }
 
 func (c *Client) MetaURL(id int) string   { return fmt.Sprintf("%s/%d", c.base(), id) }

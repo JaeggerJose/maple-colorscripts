@@ -1,8 +1,5 @@
 # maple-colorscripts curation list — one maplestory.io mob id per line.
 # Blank lines and lines starting with # are ignored. Add ids and re-run the build.
-100000   # Snail Lv1
-100001   # Blue Snail Lv2
-100002   # Red Snail Lv4
 100004   # Orange Mushroom Lv6
 100005   # Stump Lv4
 100006   # Slime Lv7
@@ -10,11 +7,8 @@
 1110100  # Green Mushroom Lv10
 1110101  # Dark Stump Lv20
 1120100  # Octopus Lv10
-1130100  # Axe Stump Lv21
 1210101  # Ribbon Pig Lv10
 1210103  # Bubbling Lv10
-2110200  # Horny Mushroom Lv12
-2220000  # Mano Lv10 (BOSS)
 2230101  # Zombie Mushroom Lv65
 2230102  # Wild Boar Lv55
 2230106  # Cico Lv76
@@ -26,8 +20,6 @@
 3230101  # Jr. Wraith Lv44
 4090000  # Iron Hog Lv42
 4130101  # Tortie Lv28
-4230102  # Wraith Lv45
-5200000  # Jr. Sentinel Lv76
 
 # --- popular / iconic mobs ---
 4230109  # Block Golem Lv96
@@ -37,7 +29,6 @@
 5120002  # Lioner Lv71
 5120003  # Grupin Lv71
 3230400  # Drumming Bunny Lv94
-5100000  # Jr. Yeti Lv78
 6300000  # Yeti Lv117 (雪吉拉)
 6130102  # Pepe Lv120
 7130102  # Yeti and Pepe Lv120
@@ -45,5 +36,3 @@
 2600226  # Wild Kargo Lv128
 2600600  # Brown Teddy Lv162
 2600601  # Pink Teddy Lv162
-9300003  # King Slime Lv28 (BOSS)
-2600231  # Jr. Balrog Lv128 (BOSS)
