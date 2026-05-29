@@ -105,13 +105,6 @@
     "slug": "mano"
   },
   {
-    "id": 2230100,
-    "name": "Evil Eye",
-    "level": 26,
-    "isBoss": false,
-    "slug": "evil-eye"
-  },
-  {
     "id": 2230101,
     "name": "Zombie Mushroom",
     "level": 65,
@@ -194,27 +187,6 @@
     "level": 76,
     "isBoss": false,
     "slug": "jr-sentinel"
-  },
-  {
-    "id": 2600209,
-    "name": "Stone Golem",
-    "level": 124,
-    "isBoss": false,
-    "slug": "stone-golem"
-  },
-  {
-    "id": 2600210,
-    "name": "Dark Stone Golem",
-    "level": 124,
-    "isBoss": false,
-    "slug": "dark-stone-golem"
-  },
-  {
-    "id": 2600211,
-    "name": "Mixed Golem",
-    "level": 124,
-    "isBoss": false,
-    "slug": "mixed-golem"
   },
   {
     "id": 4230109,

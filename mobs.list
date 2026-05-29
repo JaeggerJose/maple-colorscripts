@@ -15,7 +15,6 @@
 1210103  # Bubbling Lv10
 2110200  # Horny Mushroom Lv12
 2220000  # Mano Lv10 (BOSS)
-2230100  # Evil Eye Lv26
 2230101  # Zombie Mushroom Lv65
 2230102  # Wild Boar Lv55
 2230106  # Cico Lv76
@@ -31,9 +30,6 @@
 5200000  # Jr. Sentinel Lv76
 
 # --- popular / iconic mobs ---
-2600209  # Stone Golem Lv124 (石靈)
-2600210  # Dark Stone Golem Lv124
-2600211  # Mixed Golem Lv124
 4230109  # Block Golem Lv96
 3110100  # Ligator Lv46
 5150001  # Skeleton Soldier Lv63
