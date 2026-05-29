@@ -11,10 +11,20 @@ import (
 
 // Meta is the subset of mob metadata this project uses.
 type Meta struct {
-	ID     int    `json:"id"`
-	Name   string `json:"name"`
-	Level  int    `json:"level"`
-	IsBoss bool   `json:"isBoss"`
+	ID     int
+	Name   string
+	Level  int
+	IsBoss bool
+}
+
+// apiMob mirrors the real /mob/{id} response shape.
+type apiMob struct {
+	ID   int    `json:"id"`
+	Name string `json:"name"`
+	Meta struct {
+		Level  int  `json:"level"`
+		IsBoss bool `json:"isBoss"`
+	} `json:"meta"`
 }
 
 // Client targets a specific region+version of the API.
@@ -36,9 +46,11 @@ func (c *Client) MetaURL(id int) string   { return fmt.Sprintf("%s/%d", c.base()
 func (c *Client) RenderURL(id int) string { return fmt.Sprintf("%s/%d/render/stand", c.base(), id) }
 
 func parseMeta(body []byte) (Meta, error) {
-	var m Meta
-	err := json.Unmarshal(body, &m)
-	return m, err
+	var a apiMob
+	if err := json.Unmarshal(body, &a); err != nil {
+		return Meta{}, err
+	}
+	return Meta{ID: a.ID, Name: a.Name, Level: a.Meta.Level, IsBoss: a.Meta.IsBoss}, nil
 }
 
 // FetchMeta returns the mob's metadata.

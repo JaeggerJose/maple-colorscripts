@@ -13,12 +13,20 @@ func TestURLBuilders(t *testing.T) {
 }
 
 func TestParseMeta(t *testing.T) {
-	body := []byte(`{"id":100004,"name":"Orange Mushroom","level":6,"isBoss":false}`)
+	body := []byte(`{"id":100004,"name":"Orange Mushroom","meta":{"level":6}}`)
 	m, err := parseMeta(body)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if m.ID != 100004 || m.Name != "Orange Mushroom" || m.Level != 6 || m.IsBoss {
 		t.Errorf("parseMeta = %+v", m)
+	}
+	boss := []byte(`{"id":2220000,"name":"Mano","meta":{"level":10,"isBoss":true}}`)
+	b, err := parseMeta(boss)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !b.IsBoss || b.Level != 10 {
+		t.Errorf("boss parse = %+v", b)
 	}
 }
