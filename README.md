@@ -79,6 +79,33 @@ Add to `~/.zshrc` (or `~/.bashrc`):
 maple
 ```
 
+## Use in the Claude Code status line
+
+[Claude Code](https://docs.claude.com/en/docs/claude-code) can show a monster in
+its status line. One catch: Claude Code **trims leading whitespace per line**,
+which would break the sprite's shape. The `--statusline` flag handles this — it
+swaps spaces for U+2800 (a blank glyph that survives trimming).
+
+Add to `~/.claude/settings.json`:
+
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "maple-colorscripts -i 100004 --no-title --statusline",
+    "refreshInterval": 1
+  }
+}
+```
+
+- Use `-i <id>` (or `-n "<name>"`) to pin one monster; **omit it for a random
+  monster each refresh.**
+- `refreshInterval` (seconds; Claude Code ≥ 2.1.97) re-runs the command on a
+  timer — handy if you want it to rotate/animate. Omit it for a static sprite.
+- Drop `--no-title` if you want the `Name  Lv.N` line under the sprite.
+- For best results use a truecolor terminal and a font with the legacy-computing
+  symbols block (see Requirements).
+
 ## Add more monsters
 
 The embedded set is driven by `mobs.list` — one maplestory.io mob id per line

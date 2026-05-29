@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/JaeggerJose/maple-colorscripts/internal/sprite"
 )
@@ -22,6 +23,7 @@ func main() {
 	list := flag.Bool("list", false, "list all mobs")
 	flag.BoolVar(list, "l", false, "list all mobs (shorthand)")
 	noTitle := flag.Bool("no-title", false, "do not print the name line")
+	statusline := flag.Bool("statusline", false, "replace spaces with U+2800 so Claude Code's statusline keeps leading whitespace")
 	flag.Bool("r", false, "print a random mob (default behavior)")
 	flag.Parse()
 
@@ -60,6 +62,11 @@ func main() {
 	art, err := cat.Render(mob, !*noTitle)
 	if err != nil {
 		fatal(err)
+	}
+	if *statusline {
+		// Claude Code trims leading/trailing whitespace per line; U+2800 (braille
+		// blank) is a non-whitespace glyph that renders blank and survives.
+		art = strings.ReplaceAll(art, " ", "⠀")
 	}
 	fmt.Print(art)
 }
