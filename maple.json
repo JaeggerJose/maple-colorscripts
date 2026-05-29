@@ -154,13 +154,6 @@
     "slug": "lupin"
   },
   {
-    "id": 3210100,
-    "name": "Fire Boar",
-    "level": 58,
-    "isBoss": false,
-    "slug": "fire-boar"
-  },
-  {
     "id": 3230100,
     "name": "Curse Eye",
     "level": 27,
