@@ -201,5 +201,166 @@
     "level": 76,
     "isBoss": false,
     "slug": "jr-sentinel"
+  },
+  {
+    "id": 2600209,
+    "name": "Stone Golem",
+    "level": 124,
+    "isBoss": false,
+    "slug": "stone-golem"
+  },
+  {
+    "id": 2600210,
+    "name": "Dark Stone Golem",
+    "level": 124,
+    "isBoss": false,
+    "slug": "dark-stone-golem"
+  },
+  {
+    "id": 2600211,
+    "name": "Mixed Golem",
+    "level": 124,
+    "isBoss": false,
+    "slug": "mixed-golem"
+  },
+  {
+    "id": 4230109,
+    "name": "Block Golem",
+    "level": 96,
+    "isBoss": false,
+    "slug": "block-golem"
+  },
+  {
+    "id": 3110100,
+    "name": "Ligator",
+    "level": 46,
+    "isBoss": false,
+    "slug": "ligator"
+  },
+  {
+    "id": 4230100,
+    "name": "Cold Eye",
+    "level": 28,
+    "isBoss": false,
+    "slug": "cold-eye"
+  },
+  {
+    "id": 5150001,
+    "name": "Skeleton Soldier",
+    "level": 63,
+    "isBoss": false,
+    "slug": "skeleton-soldier"
+  },
+  {
+    "id": 5120001,
+    "name": "Cellion",
+    "level": 71,
+    "isBoss": false,
+    "slug": "cellion"
+  },
+  {
+    "id": 5120002,
+    "name": "Lioner",
+    "level": 71,
+    "isBoss": false,
+    "slug": "lioner"
+  },
+  {
+    "id": 5120003,
+    "name": "Grupin",
+    "level": 71,
+    "isBoss": false,
+    "slug": "grupin"
+  },
+  {
+    "id": 3230400,
+    "name": "Drumming Bunny",
+    "level": 94,
+    "isBoss": false,
+    "slug": "drumming-bunny"
+  },
+  {
+    "id": 5100000,
+    "name": "Jr. Yeti",
+    "level": 78,
+    "isBoss": false,
+    "slug": "jr-yeti"
+  },
+  {
+    "id": 6300000,
+    "name": "Yeti",
+    "level": 117,
+    "isBoss": false,
+    "slug": "yeti"
+  },
+  {
+    "id": 6130102,
+    "name": "Pepe",
+    "level": 120,
+    "isBoss": false,
+    "slug": "pepe"
+  },
+  {
+    "id": 7130102,
+    "name": "Yeti and Pepe",
+    "level": 120,
+    "isBoss": false,
+    "slug": "yeti-and-pepe"
+  },
+  {
+    "id": 7130200,
+    "name": "Werewolf",
+    "level": 122,
+    "isBoss": false,
+    "slug": "werewolf"
+  },
+  {
+    "id": 9010187,
+    "name": "Wolf",
+    "level": 150,
+    "isBoss": false,
+    "slug": "wolf"
+  },
+  {
+    "id": 2600226,
+    "name": "Wild Kargo",
+    "level": 128,
+    "isBoss": false,
+    "slug": "wild-kargo"
+  },
+  {
+    "id": 2600600,
+    "name": "Brown Teddy",
+    "level": 162,
+    "isBoss": false,
+    "slug": "brown-teddy"
+  },
+  {
+    "id": 2600601,
+    "name": "Pink Teddy",
+    "level": 162,
+    "isBoss": false,
+    "slug": "pink-teddy"
+  },
+  {
+    "id": 9300003,
+    "name": "King Slime",
+    "level": 28,
+    "isBoss": true,
+    "slug": "king-slime"
+  },
+  {
+    "id": 6400006,
+    "name": "Crimson Balrog",
+    "level": 44,
+    "isBoss": true,
+    "slug": "crimson-balrog"
+  },
+  {
+    "id": 2600231,
+    "name": "Jr. Balrog",
+    "level": 128,
+    "isBoss": true,
+    "slug": "jr-balrog"
   }
 ]
