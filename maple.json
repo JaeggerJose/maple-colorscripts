@@ -308,13 +308,6 @@
     "slug": "werewolf"
   },
   {
-    "id": 9010187,
-    "name": "Wolf",
-    "level": 150,
-    "isBoss": false,
-    "slug": "wolf"
-  },
-  {
     "id": 2600226,
     "name": "Wild Kargo",
     "level": 128,
