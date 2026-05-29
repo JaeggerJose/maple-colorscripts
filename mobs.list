@@ -1,0 +1,32 @@
+# maple-colorscripts curation list — one maplestory.io mob id per line.
+# Blank lines and lines starting with # are ignored. Add ids and re-run the build.
+100000   # Snail Lv1
+100001   # Blue Snail Lv2
+100002   # Red Snail Lv4
+100004   # Orange Mushroom Lv6
+100005   # Stump Lv4
+100006   # Slime Lv7
+100007   # Pig Lv7
+1110100  # Green Mushroom Lv10
+1110101  # Dark Stump Lv20
+1120100  # Octopus Lv10
+1130100  # Axe Stump Lv21
+1210101  # Ribbon Pig Lv10
+1210103  # Bubbling Lv10
+2110200  # Horny Mushroom Lv12
+2220000  # Mano Lv10 (BOSS)
+2230100  # Evil Eye Lv26
+2230101  # Zombie Mushroom Lv65
+2230102  # Wild Boar Lv55
+2230106  # Cico Lv76
+2230110  # Wooden Mask Lv60
+2300100  # Stirge Lv43
+2600208  # Mushmom Lv122 (BOSS)
+2700311  # Lupin Lv23
+3210100  # Fire Boar Lv58
+3230100  # Curse Eye Lv27
+3230101  # Jr. Wraith Lv44
+4090000  # Iron Hog Lv42
+4130101  # Tortie Lv28
+4230102  # Wraith Lv45
+5200000  # Jr. Sentinel Lv76
