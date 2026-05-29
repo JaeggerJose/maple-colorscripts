@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"maple-colorscripts/internal/sprite"
+	"github.com/JaeggerJose/maple-colorscripts/internal/sprite"
 )
 
 //go:embed maple.json

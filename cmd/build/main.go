@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"maple-colorscripts/internal/maplestoryio"
+	"github.com/JaeggerJose/maple-colorscripts/internal/maplestoryio"
 )
 
 const (
