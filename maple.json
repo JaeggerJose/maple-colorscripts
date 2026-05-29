@@ -1,1 +1,205 @@
-[{"id":0,"name":"Placeholder","level":1,"isBoss":false,"slug":"placeholder"}]
+[
+  {
+    "id": 100000,
+    "name": "Snail",
+    "level": 0,
+    "isBoss": false,
+    "slug": "snail"
+  },
+  {
+    "id": 100001,
+    "name": "Blue Snail",
+    "level": 0,
+    "isBoss": false,
+    "slug": "blue-snail"
+  },
+  {
+    "id": 100002,
+    "name": "Red Snail",
+    "level": 0,
+    "isBoss": false,
+    "slug": "red-snail"
+  },
+  {
+    "id": 100004,
+    "name": "Orange Mushroom",
+    "level": 0,
+    "isBoss": false,
+    "slug": "orange-mushroom"
+  },
+  {
+    "id": 100005,
+    "name": "Stump",
+    "level": 0,
+    "isBoss": false,
+    "slug": "stump"
+  },
+  {
+    "id": 100006,
+    "name": "Slime",
+    "level": 0,
+    "isBoss": false,
+    "slug": "slime"
+  },
+  {
+    "id": 100007,
+    "name": "Pig",
+    "level": 0,
+    "isBoss": false,
+    "slug": "pig"
+  },
+  {
+    "id": 1110100,
+    "name": "Green Mushroom",
+    "level": 0,
+    "isBoss": false,
+    "slug": "green-mushroom"
+  },
+  {
+    "id": 1110101,
+    "name": "Dark Stump",
+    "level": 0,
+    "isBoss": false,
+    "slug": "dark-stump"
+  },
+  {
+    "id": 1120100,
+    "name": "Octopus",
+    "level": 0,
+    "isBoss": false,
+    "slug": "octopus"
+  },
+  {
+    "id": 1130100,
+    "name": "Axe Stump",
+    "level": 0,
+    "isBoss": false,
+    "slug": "axe-stump"
+  },
+  {
+    "id": 1210101,
+    "name": "Ribbon Pig",
+    "level": 0,
+    "isBoss": false,
+    "slug": "ribbon-pig"
+  },
+  {
+    "id": 1210103,
+    "name": "Bubbling",
+    "level": 0,
+    "isBoss": false,
+    "slug": "bubbling"
+  },
+  {
+    "id": 2110200,
+    "name": "Horny Mushroom",
+    "level": 0,
+    "isBoss": false,
+    "slug": "horny-mushroom"
+  },
+  {
+    "id": 2220000,
+    "name": "Mano",
+    "level": 0,
+    "isBoss": false,
+    "slug": "mano"
+  },
+  {
+    "id": 2230100,
+    "name": "Evil Eye",
+    "level": 0,
+    "isBoss": false,
+    "slug": "evil-eye"
+  },
+  {
+    "id": 2230101,
+    "name": "Zombie Mushroom",
+    "level": 0,
+    "isBoss": false,
+    "slug": "zombie-mushroom"
+  },
+  {
+    "id": 2230102,
+    "name": "Wild Boar",
+    "level": 0,
+    "isBoss": false,
+    "slug": "wild-boar"
+  },
+  {
+    "id": 2230106,
+    "name": "Cico",
+    "level": 0,
+    "isBoss": false,
+    "slug": "cico"
+  },
+  {
+    "id": 2230110,
+    "name": "Wooden Mask",
+    "level": 0,
+    "isBoss": false,
+    "slug": "wooden-mask"
+  },
+  {
+    "id": 2600208,
+    "name": "Mushmom",
+    "level": 0,
+    "isBoss": false,
+    "slug": "mushmom"
+  },
+  {
+    "id": 2700311,
+    "name": "Lupin",
+    "level": 0,
+    "isBoss": false,
+    "slug": "lupin"
+  },
+  {
+    "id": 3210100,
+    "name": "Fire Boar",
+    "level": 0,
+    "isBoss": false,
+    "slug": "fire-boar"
+  },
+  {
+    "id": 3230100,
+    "name": "Curse Eye",
+    "level": 0,
+    "isBoss": false,
+    "slug": "curse-eye"
+  },
+  {
+    "id": 3230101,
+    "name": "Jr. Wraith",
+    "level": 0,
+    "isBoss": false,
+    "slug": "jr-wraith"
+  },
+  {
+    "id": 4090000,
+    "name": "Iron Hog",
+    "level": 0,
+    "isBoss": false,
+    "slug": "iron-hog"
+  },
+  {
+    "id": 4130101,
+    "name": "Tortie",
+    "level": 0,
+    "isBoss": false,
+    "slug": "tortie"
+  },
+  {
+    "id": 4230102,
+    "name": "Wraith",
+    "level": 0,
+    "isBoss": false,
+    "slug": "wraith"
+  },
+  {
+    "id": 5200000,
+    "name": "Jr. Sentinel",
+    "level": 0,
+    "isBoss": false,
+    "slug": "jr-sentinel"
+  }
+]
