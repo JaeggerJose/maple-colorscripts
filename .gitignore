@@ -1,6 +1,37 @@
+# --- Compiled binaries ---
+# The runtime CLI built to repo root, and the build tool if compiled locally.
 /maple
 /build
 /maple-colorscripts
-dist/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# --- Go test & build artifacts ---
+*.test
+*.out
+coverage.out
+coverage.html
+*.prof
+
+# --- Go workspace files (machine-local) ---
+go.work
+go.work.sum
+
+# --- Vendored deps (modules don't need this; ignore if ever created) ---
+/vendor/
+
+# --- Distribution output ---
+/dist/
 *.tmp
+
+# --- Editor / OS cruft ---
 .DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# NOTE: colorscripts/ and maple.json are build-generated but ARE committed
+# (they get embedded into the binary via go:embed). Do NOT ignore them.
